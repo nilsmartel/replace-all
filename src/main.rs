@@ -34,7 +34,7 @@ fn main() {
 
         let content = content.unwrap();
 
-        if !content.contains(&replacement) {
+        if !content.contains(&word) {
             continue;
         }
 
