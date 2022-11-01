@@ -2,7 +2,7 @@
 
 Replaces all occurences of a substring in a file
 
-    replace-all 0.1.0
+    replace-all 0.1.1
 
     USAGE:
         replace-all <word> <replacement> <files...>
