@@ -26,10 +26,15 @@ fn main() {
 
     // open file
     for file in files {
-        let content = std::fs::read_to_string(&file).expect("to read file");
+        let content = std::fs::read_to_string(&file);
+        if content.is_err() {
+            eprintln!("error: {:?}", content);
+            continue;
+        }
+
+        let content = content.unwrap();
 
         if !content.contains(&replacement) {
-            eprintln!("no occurence found in file {}", file);
             continue;
         }
 
